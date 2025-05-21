@@ -7,8 +7,7 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
 import Solutions from "@/components/solutions";
-import Image from "next/image";
-export default function Home() {
+ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />

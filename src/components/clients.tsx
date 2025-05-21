@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
 
 const testimonials = [
@@ -68,7 +69,7 @@ export default function Clients() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex justify-center items-center py-6 px-8 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700"
               >
-                <img
+                <Image
                   src={logo}
                   alt={`Client ${index + 1}`}
                   className="h-8 md:h-12 dark:invert opacity-70 hover:opacity-100 transition-opacity"
@@ -96,7 +97,7 @@ export default function Clients() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                    <img
+                    <Image
                       src={testimonial.image}
                       alt={testimonial.author}
                       className="w-full h-full object-cover dark:invert"
@@ -112,7 +113,7 @@ export default function Clients() {
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 italic">
-                  "{testimonial.text}"
+                  &quot;{testimonial.text}&quot;
                 </p>
                 <div className="mt-4 flex">
                   {[1, 2, 3, 4, 5].map((star) => (
